@@ -1,4 +1,14 @@
+$navbar-default-border: #e5e5e5;
+$navbar-margin-bottom: 50px;
+
 @import "bootstrap";
+
+.alert {
+  top: 50px;
+  left:0;
+  right: 0;
+  position:absolute;
+}
 
 .field_with_errors { @extend .has-error; }
 .alert-notice { @extend .alert-info; }
