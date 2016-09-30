@@ -12,18 +12,31 @@
 
       <div class="panel-footer">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <p class="user">Submitted by <%= @post.user.email %></p>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-8">
             <div class="pull-right">
-              <%if user_signed_in? %>
+              <% if user_signed_in? %>
                 <%= link_to "Edit Post", edit_post_path, class: "btn btn-default" %>
                 <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure you want to delete this post?" }, class: "btn btn-default" %>
               <% end %>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <% if @message.errors.any? %>
+            <p>Oops, here is what happened:</p>
+            <ul>
+              <% @message.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          <% end %>
+          <% if user_signed_in? %>
+            <%= link_to "Text this photo to a friend!", new_message_path, id: "message_form", class: "btn btn-default", remote: true %>
+          <% end %>
         </div>
       </div>
     </div>

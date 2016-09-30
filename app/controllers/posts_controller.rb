@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @message = Message.new
   end
 
   def new
