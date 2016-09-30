@@ -31,6 +31,7 @@ gem 'devise'
 gem "paperclip"
 gem 'kaminari'
 gem 'kaminari-bootstrap'
+gem 'simple_form'
 gem 'aws-sdk'
 gem 'rest-client'
 gem 'geocoder', '~> 1.4'
