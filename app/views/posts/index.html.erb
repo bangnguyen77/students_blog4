@@ -1,8 +1,13 @@
 <h1>All Posts</h1>
 
-<ul>
+<div class="transitions-enabled" id="posts">
   <% @posts.each do |post| %>
-    <%= link_to (image_tag post.image.url(:medium)), post %>
-    <h3><%= link_to post.title, post_path(post) %></h3>
+    <div class="box panel panel-default">
+      <%= link_to (image_tag post.image.url(:medium)), post %>
+      <div class="panel-body">
+        <h3><%= link_to post.title, post_path(post) %></h3>
+        <p>Submitted by <%= post.user.email %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
