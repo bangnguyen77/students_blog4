@@ -26,6 +26,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap-sass'
+gem 'devise'
+gem "paperclip"
+gem 'aws-sdk'
+gem 'rest-client'
+gem 'geocoder', '~> 1.4'
+gem 'gmaps4rails', '~> 2.1.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -33,6 +40,18 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'simplecov', require: false
+  gem 'dotenv-rails'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do
