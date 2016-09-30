@@ -1,24 +1,42 @@
-# README
+# STUDENTS BLOG - INDEPENDENT PROJECT
+#### By Bang Nguyen
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This app allows users to sign up and post an article or a writing on the homepage and other users can comment on it.
+And it lets users send text messages to their friends!
 
-Things you may want to cover:
+## General Setup Instructions
+* Clone this repository
+* Install gems by running command `$ bundle` in the terminal
+* Open another terminal tab and type `postgres` to start PostgreSQL database
+* Return to first terminal tab and run `rails db:create` to create the databases
+* Run `rails db:migrate db:test:prepare` to create tables
+* Run `rails db:seed` to seed the database
+* Launch the Rails server by running command `$ rails s` in the terminal
+* Launch site by visiting localhost:3000 in browser
+* For texting from the app, Twilio account sid and auth token are needed
 
-* Ruby version
 
-* System dependencies
+## User Stories
+As a user I want to:
+* As a user, I want to write, edit and delete a post.
+* As a user, I want to attach an image to my post.
+* As a user, I want to send a text message to a phone number, so that I can send texts from the web. Hint: Follow along with the lesson.
+* As a user, I want to save contacts to an address book, so that it's easy to text them again without re-typing their phone number.
+* As a user, I want to send a message to more than one person at once, so that I can mass text my friends.
 
-* Configuration
+## Tech Used
 
-* Database creation
+* Ruby on Rails (v. 5.0.0.1)
+* Twilio
+* Active Record
+* PostgreSQL
+* AJAX
+* jQuery
+* Bootstrap/SCSS
 
-* Database initialization
+### License
 
-* How to run the test suite
+This software is licensed under the MIT license.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright (c) 2016 * Bang Nguyen *
