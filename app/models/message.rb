@@ -11,9 +11,8 @@ class Message < ApplicationRecord
         :user => ENV['TWILIO_ACCOUNT_SID'],
         :password => ENV['TWILIO_AUTH_TOKEN'],
         :payload => { :Body => body,
-                      :To => to,
-                      :From => from }
-
+                      :From => ENV['TWILIO_FROM_NUMBER'],
+                      :To => to }
         ).execute
     rescue RestClient::BadRequest => error
       message = JSON.parse(error.response)['message']
