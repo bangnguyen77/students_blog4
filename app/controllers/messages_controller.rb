@@ -8,10 +8,13 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     if @message.save
       flash[:notice] = "Your message was sent"
-      redirect_to posts_path
+      respond_to do |format|
+        format.html { redirect_to post_path(@post) }
+        format.js
+      end
     else
       flash[:alert] = "Oops, something went wrong!"
-      render 'new'
+      redirect_to posts_path
     end
   end
 
