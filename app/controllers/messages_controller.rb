@@ -14,7 +14,9 @@ class MessagesController < ApplicationController
       end
     else
       flash[:alert] = "Oops, something went wrong!"
-      redirect_to posts_path
+      format.html { redirect_to post_path(@post) }
+      format.js
+
     end
   end
 
